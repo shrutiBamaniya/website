@@ -21,6 +21,7 @@ body {
   color: white;
   padding: 8px 20px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  
 }
 
 .header-wrap {
@@ -63,7 +64,7 @@ body {
 
 .site-nav {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -72,7 +73,7 @@ body {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 16px;
   white-space:nowrap;
   margin-right: 15;
   transition: 0.3s;

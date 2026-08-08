@@ -595,7 +595,7 @@ body {
 .contact{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg,#071a35,#0b2f6b,#1e5cb3);
+    background: linear-gradient(135deg,#0b2f6b,#1e5cbf);
     padding: 40px 20px;
     text-align: center;
 }
@@ -681,5 +681,122 @@ body {
     background: white;
     color: #071a35;
     box-shadow: 0 0 20px rgba(245,197,66,0.8);
+}
+
+/* ===== Degrees Section ===== */
+
+.degrees{
+    padding: 30px 8%;
+    background: linear-gradient(135deg,#0d47a1,#175c94);
+    min-height: 100vh;
+}
+
+.degrees-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.degrees-heading h1{
+    font-size:48px;
+    color:#f5c542;
+    margin-bottom:10px;
+}
+
+.degrees-heading p{
+    color:#fff;
+    font-size:20px;
+}
+
+/* Search Bar */
+
+.search-box{
+    input::placeholder{
+        color: #999;
+    
+    }
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.search-box input{
+    width:50%;
+    max-width:500px;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    outline:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: 0.3s ease;
+}
+.search-box input:focus{
+    outline:none;
+    border:2px solid #f5c542;
+    box-shadow:0 0px 15px rgba(245,197,66,0.8);
+    
+}
+
+
+/* Degree Cards */
+
+.degree-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.degree-card{
+    background:rgba(255,255,255,0.15);
+    border:2px solid rgba(255,255,255,0.3);
+    border-radius:20px;
+    padding:25px;
+    color:#fff;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.degree-card:hover{
+    transform:translateY(-10px);
+    border-color:#f5c542;
+    border:2px solid #ffd700;
+    box-shadow: 0 0 10px #ffd700, 0 0 20px rgba(255,215,0,0.6), 0 0 35px rgba(255,215,0,0.4);
+    transition: 0.3s ease;
+}
+
+.degree-card h2{
+    color:#f5c542;
+    margin-bottom:15px;
+    font-size: 40px;
+}
+
+.degree-card p{
+    margin:10px 0;
+    line-height:1.6;
+}
+
+.degree-card button{
+    margin-top:15px;
+    padding:10px 22px;
+    border:none;
+    border-radius:30px;
+    background:#f5c542;
+    color:#0b1f44;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.degree-card button:hover{
+    background:#fff;
+    color:#0b1f44;
+}
+
+.degree-fullform{
+    font-size: 18px;
+    color: #ffd966;
+    margin-bottom: 10px;
+    font-style: bold;
 }
 

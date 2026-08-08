@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("contactForm");
     const mobile = document.getElementById("mobile");
+    const nameInput = document.getElementById("name");
+    const city = document.getElementById("city");
 
     // Only numbers allowed (0-9)
     mobile.addEventListener("input", function () {
@@ -11,6 +13,27 @@ document.addEventListener("DOMContentLoaded", function () {
             this.value = this.value.slice(0, 10);
         }
     });
+
+    // Only numbers allowed (0-9)
+mobile.addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9]/g, "");
+
+    if (this.value.length > 10) {
+        this.value = this.value.slice(0, 10);
+    }
+});
+
+// Full Name - only alphabets
+nameInput.addEventListener("input", function () {
+    this.value = this.value.replace(/[^A-Za-z ]/g, "");
+});
+
+// City - only alphabets
+city.addEventListener("input", function () {
+    this.value = this.value.replace(/[^A-Za-z ]/g, "");
+});
+
+
 
     form.addEventListener("submit", function (e) {
 
@@ -22,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let mobilePattern = /^[0-9]{10}$/;
+      
 
         if (name === "") {
             alert("Please enter your full name.");
@@ -44,3 +68,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// Degree Search
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+
+    const cards = document.querySelectorAll(".degree-card");
+
+    searchInput.addEventListener("keyup", function () {
+
+        let searchValue = searchInput.value.toLowerCase();
+
+        cards.forEach(function(card) {
+
+            let degreeName = card.querySelector("h2").textContent.toLowerCase();
+
+            if (degreeName.includes(searchValue)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+
+    });
+
+}
